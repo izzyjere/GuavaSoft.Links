@@ -1,4 +1,4 @@
-GuavaSoft Blazor Anchor Navigation Tool built on top of <a href="https://github.com/DevExpress/Blazor/tree/master/tools/DevExpress.Blazor.AnchorUtils">DevExpress Anchor</a>
+GuavaSoft Blazor Anchor Navigation Tool built on top of <a target="blank" href="https://github.com/DevExpress/Blazor/tree/master/tools/DevExpress.Blazor.AnchorUtils">DevExpress Anchor</a>
 
 The GuavaSoft Anchor Navigation tool automatically scrolls a page to an anchor in the following instances:
 
@@ -31,7 +31,7 @@ Follow the steps below to add the tool to your Blazor application.
 ```
    
 3. Add the non-visual **AnchorLinkProvider** component to the _Shared/MainLayout.razor_ file:
-
+(Optional)Provide the OffsetSelector parameter with your  pinned (non-scrollable) header css selector (like .top-row in the standard Blazor project)
 ```html
 <div class="main">
     ...
@@ -39,5 +39,5 @@ Follow the steps below to add the tool to your Blazor application.
         @Body 
     </div> 
 </div>
-<AnchorLinkProvider />
+<AnchorLinkProvider OffsetSelector=".content" />
 ```

@@ -1,20 +1,13 @@
 ﻿using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace GuavaSoft.Links
 {
     public class AnchorLinkProvider : ComponentBase, IDisposable
     {
         [Inject] public NavigationManager NavigationManager { get; set; }
         [Inject] public IJSRuntime JSRuntime { get; set; }
-
+        [Parameter] public string? OffsetSelector { get; set; }
         [Parameter] public RenderFragment ChildContent { get; set; }
         private Lazy<Task<IJSObjectReference>> moduleTask;
         string Anchor { get; set; }
@@ -49,7 +42,7 @@ namespace GuavaSoft.Links
             if (module != null)
             {
                 if (!string.IsNullOrEmpty(anchor) || forceScroll)
-                   await module.InvokeAsync<string>("scrollToAnchor", anchor);
+                   await module.InvokeAsync<string>("scrollToAnchor", anchor, OffsetSelector);
             }
         }
 
