@@ -4,6 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Wisdom Jere</Authors>
+    <Company>GuavaSoft Zambia</Company>
+    <PackageProjectUrl>https://github.com/izzyjere/GuavaSoft.Links</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/izzyjere/GuavaSoft.Links</RepositoryUrl>
+    <PackageTags>Blazor, Section Navigation, Navigation, Links</PackageTags>
+    <Title>GuavaSoft.Links</Title>
+    <Description>About
+Anchor Navigation tool that automatically scrolls a page to an anchor.</Description>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
 
@@ -13,6 +23,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
