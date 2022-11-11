@@ -1,4 +1,4 @@
-GuavaSoft Blazor Anchor Navigation Tool built on top of <a target="blank" href="https://github.com/DevExpress/Blazor/tree/master/tools/DevExpress.Blazor.AnchorUtils">DevExpress Anchor</a>
+GuavaSoft Blazor Anchor Navigation Tool built on top of <a target="blank" href="https://github.com/DevExpress/Blazor/tree/master/tools/DevExpress.Blazor.AnchorUtils">DevExpress Anchor</a> with no javascript require
 
 The GuavaSoft Anchor Navigation tool automatically scrolls a page to an anchor in the following instances:
 
@@ -22,11 +22,28 @@ When an end-user clicks the link, the page scrolls to the corresponding anchor:
 
 Follow the steps below to add the tool to your Blazor application.
 
-1. Download and add the **GuavaSoft.Links** package project to your Blazor solution.
+1.  Adding it to your project with nuget
+
+**Package Manager**
+
+```sh
+Install-Package Guavasoft.Links -Version 1.0.0
+```
+
+**.NET CLI**
+
+```sh
+dotnet add package Guavasoft.Links --version 1.0.0
+```
+**PackageReference**
+
+```sh
+<PackageReference Include="Guavasoft.Links" Version="1.0.0" />
+```
 
 2. Register the **GuavaSoft.Links** namespace in the _\_Imports.razor_ file:
 
-```
+```csharp
 @using GuavaSoft.Links
 ```
    
