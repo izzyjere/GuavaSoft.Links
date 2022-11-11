@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GuavaSoft.Links
 {
-    internal class AnchorProvider : ComponentBase, IDisposable
+    public class AnchorLinkProvider : ComponentBase, IDisposable
     {
         [Inject] public NavigationManager NavigationManager { get; set; }
         [Inject] public IJSRuntime JSRuntime { get; set; }
